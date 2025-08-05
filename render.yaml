@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: vault
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /v1/sys/health
+    envVars:
+      - key: VAULT_DEV_ROOT_TOKEN_ID
+        value: myroot
+      - key: VAULT_DEV_LISTEN_ADDRESS
+        value: 0.0.0.0:8200
