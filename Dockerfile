@@ -195,6 +195,7 @@ FROM ubuntu:focal AS builder
 
 # Pass in the GO_VERSION as a build-arg
 ARG GO_VERSION
+RUN echo "GO_VERSION=$GO_VERSION"
 
 # Set our environment
 ENV PATH="/root/go/bin:/opt/go/bin:$PATH"
