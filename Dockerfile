@@ -220,7 +220,6 @@ RUN chmod +x tools.sh
 RUN ./tools.sh install-external && rm -rf "$(go env GOCACHE)" && rm -rf "$(go env GOMODCACHE)"
 
 # Run the build
-COPY .build/entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
