@@ -218,6 +218,7 @@ RUN ./go.sh
 COPY tools/tools.sh .
 RUN chmod +x tools.sh
 RUN ./tools.sh install-external && rm -rf "$(go env GOCACHE)" && rm -rf "$(go env GOMODCACHE)"
+RUN ls -l
 
 # Run the build
 RUN chmod +x entrypoint.sh
